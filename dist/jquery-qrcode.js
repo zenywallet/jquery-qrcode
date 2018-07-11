@@ -182,10 +182,10 @@
 
     function drawModuleRoundendLight(ctx, l, t, r, b, rad, nw, ne, se, sw) {
         if (nw) {
-            ctx.moveTo(l + rad, t);
+            ctx.moveTo(l, t + rad);
             ctx.lineTo(l, t);
-            ctx.lineTo(l, t + rad);
-            ctx.arcTo(l, t, l + rad, t, rad);
+            ctx.lineTo(l + rad, t);
+            ctx.arcTo(l, t, l, t + rad, rad);
         }
 
         if (ne) {
@@ -196,10 +196,10 @@
         }
 
         if (se) {
-            ctx.moveTo(r - rad, b);
+            ctx.moveTo(r, b - rad);
             ctx.lineTo(r, b);
-            ctx.lineTo(r, b - rad);
-            ctx.arcTo(r, b, r - rad, b, rad);
+            ctx.lineTo(r - rad, b);
+            ctx.arcTo(r, b, r, b - rad, rad);
         }
 
         if (sw) {
